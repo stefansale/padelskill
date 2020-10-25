@@ -83,7 +83,7 @@ export default function LevelTable() {
                   <h2 className={classes.level}>3</h2>
                </Grid>
                <Grid item md={11} sm={10} xs={9} className={classes.listitem}>
-                  <h5 className={classes.leveldesc}>Nybörjare avancerad. Känner till grunderna i spelet men är obekväm med markslag och har problem med väggstuds.</h5>
+                  <h5 className={classes.leveldesc}>Nybörjare avancerad. Känner till grunderna men smashar bollen för agressivt likt legenden Alex Laurén.</h5>
                </Grid>
                <Grid item xs={12}>
                <Divider light="false" variant="middle" className={classes.dividercolor}/>
@@ -94,7 +94,7 @@ export default function LevelTable() {
                   <h2 className={classes.level}>4</h2>
                </Grid>
                <Grid item md={11} sm={10} xs={9} className={classes.listitem}>
-                  <h5 className={classes.leveldesc}>Fritidsspelare. Spelat ett tag och känner grunderna väl och kan öka tempo i spelet, men spelar inte konsekvent.</h5>
+                  <h5 className={classes.leveldesc}>Fritidsspelare. Spelat ett tag och känner grunderna väl men har problem att hålla kvalitén uppe likt Martin Schönberg en sen söndagskväll.</h5>
                </Grid>
                <Grid item xs={12}>
                <Divider light="false" variant="middle" className={classes.dividercolor}/>
@@ -171,7 +171,7 @@ export default function LevelTable() {
                   <h2 className={classes.level}>11</h2>
                </Grid>
                <Grid item md={11} sm={10} xs={9} className={classes.listitem}>
-                  <h5 className={classes.leveldesc}>Fritidsspelare. Spelat ett tag och känner grunderna väl och kan öka tempo i spelet, men spelar inte konsekvent.</h5>
+                  <h5 className={classes.leveldesc}>Förknippar sig själv som Zlatan. Padelbanan hedras av din närvaro.</h5>
                </Grid>
                <Grid item xs={12}>
                <Divider light="false" variant="middle" className={classes.dividercolor}/>
@@ -182,7 +182,7 @@ export default function LevelTable() {
                   <h2 className={classes.level}>12</h2>
                </Grid>
                <Grid item md={11} sm={10} xs={9} className={classes.listitemlast}>
-                  <h5 className={classes.leveldesc}>Fritidsspelare. Spelat ett tag och känner grunderna väl och kan öka tempo i spelet, men spelar inte konsekvent.</h5>
+                  <h5 className={classes.leveldesc}>Du är gud. Slår inga felslag och vinner alla matcher med 2-0 i set utan att förlora ett poäng. Magnifik!</h5>
                </Grid>
                
 

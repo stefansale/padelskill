@@ -6,7 +6,7 @@ import SportsBaseballRoundedIcon from '@material-ui/icons/SportsBaseballRounded'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-     paddingBottom: theme.spacing(4),
+     paddingBottom: theme.spacing(3),
     },
     ball: {
       marginLeft: theme.spacing(2),
