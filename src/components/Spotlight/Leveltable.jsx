@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
    listitem: {
      display: 'flex',
      lineHeight: 1,
+     margin: "auto",
      },
 
      listitemlast: {
@@ -28,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
    level: {
      marginRight: theme.spacing(2),
    },
+   middlefix: {
+      margin: "auto",
+    },
    leveldesc: {
       margin: "auto 0",
       lineHeight: 1.5,
@@ -44,7 +48,7 @@ export default function LevelTable() {
 
      return (
          <div className={classes.root}>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className={classes.middlefix}>
 
             <Grid item md={1} sm={2} xs={3} className={classes.listitem}>
             <h5 className={classes.leveldesc}>Nivå:</h5>
