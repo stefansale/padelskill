@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontFamily: "'Orbitron', sans-serif",
     padding: theme.spacing(3, 2),
-    backgroundColor: "#5d7af8",
+    backgroundColor: "#282e4c",
     marginTop: 'auto',
     textAlign: "center",
     color: "#fff",

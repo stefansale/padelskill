@@ -1,16 +1,17 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Container, Typography } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 
+const background = "https://betasy-qa.s3-eu-west-1.amazonaws.com/assets/padelHome.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-     paddingTop: theme.spacing(15),
-     paddingBottom: theme.spacing(15),
-     backgroundColor: "#5d7af8",
+     
+     paddingTop: theme.spacing(10),
+     paddingBottom: theme.spacing(10),
      [theme.breakpoints.down('sm')]: {
-      paddingTop: theme.spacing(8),
-     paddingBottom: theme.spacing(8),
+      paddingTop: theme.spacing(4),
+      paddingBottom: theme.spacing(4),
     },
     },
     ball: {
@@ -34,10 +35,26 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down('sm')]: {
          fontSize: "1.5rem",
        },
-   } 
+   },
+   imagee: {
+      minWidth: 550,
+      maxHeight: 550,
+      [theme.breakpoints.only('xs')]: {
+         minWidth: 220,
+         maxHeight: 220,
+       },
+      [theme.breakpoints.only('sm')]: {
+      minWidth: 380,
+      maxHeight: 380,
+      },
+      [theme.breakpoints.only('md')]: {
+         minWidth: 470,
+         maxHeight: 470,
+         },
+      },
 }));
 
-export default function MiddleHeader() {
+export default function HomeMiddle() {
   const classes = useStyles();
 
   return (
@@ -45,7 +62,7 @@ export default function MiddleHeader() {
       <Container>
       <Grid container spacing={2}>
        <Grid item xs={12}>
-          <Typography variant="h1" component="h1" className={classes.headertext}>När padel är livet!</Typography>
+       <div><img src={background} alt="Home background" className={classes.imagee}/></div>
         </Grid>
       </Grid>
       </Container>

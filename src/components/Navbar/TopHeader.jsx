@@ -2,12 +2,11 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Container, Link, Divider } from '@material-ui/core';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
      paddingTop: theme.spacing(3),
      paddingBottom: theme.spacing(3),
-     backgroundColor: "#5d7af8",
+     backgroundColor: "#282e4c",
      [theme.breakpoints.only('xs')]: {
       display: "none",
     },
@@ -33,13 +32,11 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down('xs')]: {
          fontSize: "0.8rem",
        },
-   } 
+   }
 }));
 
 export default function TopHeader() {
   const classes = useStyles();
-
-  const preventDefault = (event) => event.preventDefault();
 
   return (
     <div className={classes.root}>
@@ -48,16 +45,15 @@ export default function TopHeader() {
        <Grid item xs={12} className={classes.navspacing}>
        
           <div>
-          <Link href="#" onClick={preventDefault} color="inherit" className={classes.headertext} underline="none">
+          <Link href="/nivaer" color="inherit" className={classes.headertext} underline="none">
             {'Nivåer'}
           </Link></div><Divider orientation="vertical" className={classes.dividercolor}/>
-          <div><Link href="#" onClick={preventDefault} color="inherit" className={classes.headertext} underline="none">
+          <div><Link href="/personas" color="inherit" className={classes.headertext} underline="none">
             {'Personligheter'}
           </Link></div><Divider orientation="vertical" className={classes.dividercolor}/>
-          <div><Link href="#" onClick={preventDefault} color="inherit" className={classes.headertext} underline="none">
+          <div><Link href="/poangtavlan" color="inherit" className={classes.headertext} underline="none">
             {'Poängtavlan'}
-          </Link></div>
-          
+          </Link></div> 
        
         </Grid>
       </Grid>

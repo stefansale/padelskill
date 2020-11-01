@@ -7,13 +7,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
      paddingBottom: theme.spacing(3),
     },
-    personhead: {
+    ball: {
       marginLeft: theme.spacing(2),
       fontSize: "3rem",
       color: "#57dfce",
       [theme.breakpoints.down('sm')]: {
-         fontSize: "3rem",
-         marginLeft: theme.spacing(0),
+         fontSize: "2.5rem",
+         marginLeft: theme.spacing(2),
          marginTop: theme.spacing(2),
        },
      },
@@ -23,14 +23,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "4rem",
       color: "#282e4c",
       textAlign: "center",
-      marginBottom: theme.spacing(2),
       [theme.breakpoints.down('sm')]: {
-         fontSize: "3rem",
+         fontSize: "2.5rem",
+         textAlign: "left",
        },
    } 
 }));
 
-export default function PersonasHeader() {
+export default function BoardHeader() {
   const classes = useStyles();
 
   return (
@@ -39,7 +39,7 @@ export default function PersonasHeader() {
       <Grow in={true} timeout={2000}>
       <Grid container spacing={2}>
        <Grid item xs={12}>
-          <Typography variant="h1" component="h1" className={classes.headertext}>Padel Personas</Typography>
+          <Typography variant="h1" component="h1" className={classes.headertext}>Poängtavlan</Typography>
         </Grid>
       </Grid>
       </Grow>

@@ -5,7 +5,7 @@ import Grow from '@material-ui/core/Grow';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-     paddingBottom: theme.spacing(6),
+     paddingBottom: theme.spacing(2),
     },
     ball: {
       marginLeft: theme.spacing(2),
@@ -28,10 +28,21 @@ const useStyles = makeStyles((theme) => ({
          fontSize: "3rem",
          textAlign: "center",
        },
+   },
+   headertext2: {
+      fontWeight: 600,
+      fontFamily: "'Orbitron', sans-serif",
+      fontSize: "2rem",
+      color: "#282e4c",
+      textAlign: "center",
+      [theme.breakpoints.down('sm')]: {
+         fontSize: "1.5rem",
+         textAlign: "center",
+       },
    } 
 }));
 
-export default function SkillHeader() {
+export default function HomeHeader() {
   const classes = useStyles();
 
   return (
@@ -40,7 +51,8 @@ export default function SkillHeader() {
         <Grow in={true} timeout={2000}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <Typography variant="h1" component="h1" className={classes.headertext}>Padel Nivåer</Typography>
+              <Typography variant="h2" component="h2" className={classes.headertext2}>Välkommen till</Typography>
+              <Typography variant="h1" component="h1" className={classes.headertext}>Padel Things</Typography>
             </Grid>
           </Grid>
         </Grow>

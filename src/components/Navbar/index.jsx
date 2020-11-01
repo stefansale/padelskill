@@ -5,6 +5,7 @@ import FastfoodIcon from '@material-ui/icons/Fastfood';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
+import { Link } from 'react-router-dom';
 
 const logo = "https://betasy-qa.s3-eu-west-1.amazonaws.com/assets/pt-logo.svg";
 
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     logo: {
       height: "35px",
       padding: "10px",
+      cursor: "pointer",
       [theme.breakpoints.only('xs')]: {
          height: "30px",
        },
@@ -39,12 +41,13 @@ const useStyles = makeStyles((theme) => ({
      menu_block: {
       marginTop: theme.spacing(4),
       marginRight: theme.spacing(2),
+      width: "100%",
      },
      navspacing: {
       display: "flex",
       justifyContent: "space-between",
       [theme.breakpoints.up('sm')]: {
-         justifyContent: "center",
+         justifyContent: "start",
        },
      },
    headertext: {
@@ -57,7 +60,14 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down('sm')]: {
          fontSize: "3rem",
        },
-   } 
+   },
+   linkText: {
+      fontWeight: 600,
+      fontFamily: "'Orbitron', sans-serif",
+      fontSize: "1rem",
+      color: "#5d7af8",
+      textDecoration: "none",
+   }, 
 }));
 
 export default function Navbar() {
@@ -77,8 +87,8 @@ export default function Navbar() {
     <div className={classes.root}>
       <Container>
          <Grid container spacing={2}>
-            <Grid item xs={12} className={classes.navspacing}>
-               <div><img src={logo} alt="ball" className={classes.logo}/></div>
+            <Grid item md={10} xs={12} className={classes.navspacing}>
+               <Link to="/"><div><img src={logo} alt="ball" className={classes.logo}/></div></Link>
                <div className={classes.burger_visual}><IconButton
                aria-label="account of current user"
                aria-controls="menu-appbar"
@@ -105,11 +115,10 @@ export default function Navbar() {
                 TransitionComponent={Fade}
               >
                
-                <MenuItem onClick={handleClose}>Nivåer</MenuItem>
-                <MenuItem onClick={handleClose}>Personas</MenuItem>
-               <MenuItem onClick={handleClose}>Poängtavlan</MenuItem>
-                <MenuItem onClick={handleClose}>Personas</MenuItem>
-                
+                <MenuItem onClick={handleClose}><Link to="/nivaer" color="inherit" className={classes.linkText} underline="none">Nivåer</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/personas" color="inherit" className={classes.linkText} underline="none">Personligheter</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/poangtavlan" color="inherit" className={classes.linkText} underline="none">Poängtavlan</Link></MenuItem>
+               
               </Menu>
                </div>
             </Grid>
